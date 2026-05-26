@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>开屏动画</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff; /* 整体黑色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .container {
+    position: fixed;
+    inset: 0;
+    z-index: 1000; /* 确保容器在其他元素之上 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 简单的阴影效果 */
+  }
+
+  /* 左右黑色块 */
+.splash__left,
+.splash__right {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: #000;
+  transition: all 1s ease-in-out; /* 加上过渡 */
+}
+
+  .splash__left {
+  left: 0;
+  width: 50%;
+  /* 初始：无圆角 */
+  border-radius: 0;
+  }
+
+  .splash__right {
+  right: 0;
+  width: 50%;
+  /* 初始：无圆角 */
+  border-radius: 0;
+  }
+  /* 中间 3px 白色竖线（矩形） */
+  .center-line {
+    width: 3px;
+    height: 100vh;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    transition: all 4s ease-in-out; /* 加上过渡 */
+  }
+  
+  .container.open .splash__left {
+    
+    transform: translateX(-100%);
+  }
+  .container.open .splash__right {
+   
+    transform: translateX(100%);
+  }
+
+
+</style>
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="splash__left"></div>
+    <div class="splash__right"></div>
+  </div>
+  <div class="center-line" id="centerLine"></div>
+  <script src="open.js"></script>
+</body>
+</html>
