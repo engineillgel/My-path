@@ -1,14 +1,14 @@
-# Splash Animation - 开屏动画
+# My-path - 我的学习之路
+
+记录我的前端学习历程与项目实践。
+
+## Splash Animation - 开屏动画
 
 一个简洁优雅的网页开屏动画效果：页面加载后，两侧黑色幕布向外滑开，中间白色竖线展开，适合作为网站或应用的入场动画。
 
-## 效果预览
-
-![Preview](preview.gif)
-
 ## 目录结构
 
-```
+```text
 ├── Page/
 │   ├── index.html    # 主页面（HTML + CSS）
 │   └── open.js       # 动画逻辑
@@ -17,12 +17,7 @@
 
 ## 快速开始
 
-1. 克隆仓库
-```bash
-git clone https://github.com/你的用户名/仓库名.git
-```
-
-2. 直接用浏览器打开 `Page/index.html` 即可查看效果
+直接用浏览器打开 `Page/index.html` 即可查看效果。
 
 ## 技术实现
 
@@ -33,7 +28,7 @@ git clone https://github.com/你的用户名/仓库名.git
 ## 动画参数
 
 | 参数 | 值 |
-|------|------|
+| ---- | -- |
 | 延迟启动 | 500ms |
 | 遮罩滑出过渡 | 1s ease-in-out |
 | 中心线展开过渡 | 4s ease-in-out |
